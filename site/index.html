@@ -1,0 +1,1538 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mel e extrato de própolis de abelha sem ferrão, produzidos por Ricardo em Joinville/SC. Cinco espécies, cinco sabores.">
+<!--ARTIFACT:START-->
+<title>Melibees</title>
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans:wght@400;500;700;800&display=swap">
+<style>
+/* ============================================================
+   MELIBEES — protótipo de landing page
+   Identidade: PROJETO MELIBEES (logos, selos, padronagens)
+   Tipografia da marca: Josefin Sans
+   ============================================================ */
+
+/* ---------- tokens ---------- */
+:root{
+  /* marca — amostrado dos arquivos originais */
+  --terra:#D34D1E;
+  --terra-esc:#A0380A;
+  --mel:#DD9522;
+  --ouro:#F4C540;
+  --lima:#A9C84B;
+  --folha:#689B53;
+  --mata:#3A8242;
+
+  /* superfícies — tema claro */
+  --papel:#FFFCF8;
+  --carta:#FFFFFF;
+  --carta-2:#FBF4EA;
+  --tinta:#2C1B0F;
+  --tinta-2:#7B6553;
+  --linha:#EBDFD0;
+  --realce:#C6440F;
+  --realce-tinta:#FFFFFF;
+
+  /* faixas de cor de sangria total */
+  --faixa-terra:#D34D1E;   --faixa-terra-tinta:#FFF6EF;
+  --faixa-mata:#3A8242;    --faixa-mata-tinta:#F3FAEF;
+  --faixa-esc:#A0380A;     --faixa-esc-tinta:#FFEFE4;
+  --faixa-ouro:#F4C540;    --faixa-ouro-tinta:#3A2408;
+  --faixa-lima:#A9C84B;    --faixa-lima-tinta:#26340B;
+  --heroi-realce:#A5300B;
+
+  --sombra:0 1px 2px rgba(44,27,15,.05), 0 14px 34px -14px rgba(44,27,15,.22);
+  --sombra-alta:0 2px 4px rgba(44,27,15,.06), 0 30px 60px -24px rgba(44,27,15,.34);
+
+  --medida:1160px;
+  --raio:20px;
+  --raio-p:12px;
+
+  /* padronagem de flores redesenhada a partir de PADRONAGENS-27 */
+  --flor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128' viewBox='0 0 128 128'%3E%3Cdefs%3E%3Cg id='f' fill='none' stroke='%23000' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg transform='rotate(0)'%3E%3Cpath d='M0 0C10-10 12-28 0-42C-12-28-10-10 0 0Z'/%3E%3Cpath d='M0-9L0-33'/%3E%3C/g%3E%3Cg transform='rotate(60)'%3E%3Cpath d='M0 0C10-10 12-28 0-42C-12-28-10-10 0 0Z'/%3E%3Cpath d='M0-9L0-33'/%3E%3C/g%3E%3Cg transform='rotate(120)'%3E%3Cpath d='M0 0C10-10 12-28 0-42C-12-28-10-10 0 0Z'/%3E%3Cpath d='M0-9L0-33'/%3E%3C/g%3E%3Cg transform='rotate(180)'%3E%3Cpath d='M0 0C10-10 12-28 0-42C-12-28-10-10 0 0Z'/%3E%3Cpath d='M0-9L0-33'/%3E%3C/g%3E%3Cg transform='rotate(240)'%3E%3Cpath d='M0 0C10-10 12-28 0-42C-12-28-10-10 0 0Z'/%3E%3Cpath d='M0-9L0-33'/%3E%3C/g%3E%3Cg transform='rotate(300)'%3E%3Cpath d='M0 0C10-10 12-28 0-42C-12-28-10-10 0 0Z'/%3E%3Cpath d='M0-9L0-33'/%3E%3C/g%3E%3C/g%3E%3C/defs%3E%3Cuse href='%23f' x='0' y='0'/%3E%3Cuse href='%23f' x='128' y='0'/%3E%3Cuse href='%23f' x='0' y='128'/%3E%3Cuse href='%23f' x='128' y='128'/%3E%3Cuse href='%23f' x='64' y='64'/%3E%3C/svg%3E");
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --papel:#170F09;
+    --carta:#211710;
+    --carta-2:#2A1E15;
+    --tinta:#F7EFE4;
+    --tinta-2:#BCA48E;
+    --linha:#3B2B1E;
+    --realce:#F0794A;
+    --realce-tinta:#1B0D04;
+
+    --faixa-terra:#8C3312;   --faixa-terra-tinta:#FFE9DC;
+    --faixa-mata:#20522A;    --faixa-mata-tinta:#E4F3DC;
+    --faixa-esc:#5C1E04;     --faixa-esc-tinta:#FFE3D2;
+    --faixa-ouro:#7A5A12;    --faixa-ouro-tinta:#FBEBC6;
+    --faixa-lima:#5E7420;    --faixa-lima-tinta:#EDF6D3;
+    --heroi-realce:#F4C540;
+
+    --sombra:0 1px 2px rgba(0,0,0,.4), 0 14px 34px -14px rgba(0,0,0,.7);
+    --sombra-alta:0 2px 4px rgba(0,0,0,.4), 0 30px 60px -24px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --papel:#170F09;
+  --carta:#211710;
+  --carta-2:#2A1E15;
+  --tinta:#F7EFE4;
+  --tinta-2:#BCA48E;
+  --linha:#3B2B1E;
+  --realce:#F0794A;
+  --realce-tinta:#1B0D04;
+
+  --faixa-terra:#8C3312;   --faixa-terra-tinta:#FFE9DC;
+  --faixa-mata:#20522A;    --faixa-mata-tinta:#E4F3DC;
+  --faixa-esc:#5C1E04;     --faixa-esc-tinta:#FFE3D2;
+  --faixa-ouro:#7A5A12;    --faixa-ouro-tinta:#FBEBC6;
+  --faixa-lima:#5E7420;    --faixa-lima-tinta:#EDF6D3;
+  --heroi-realce:#F4C540;
+
+  --sombra:0 1px 2px rgba(0,0,0,.4), 0 14px 34px -14px rgba(0,0,0,.7);
+  --sombra-alta:0 2px 4px rgba(0,0,0,.4), 0 30px 60px -24px rgba(0,0,0,.8);
+}
+
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--papel);
+  color:var(--tinta);
+  font-family:"Alegreya","Iowan Old Style",Georgia,serif;
+  font-size:17px;
+  line-height:1.62;
+  overflow-x:hidden;
+}
+img{max-width:100%; display:block}
+a{color:inherit}
+button{font:inherit; color:inherit}
+
+h1,h2,h3,h4,.disp{
+  font-family:"Josefin Sans","Century Gothic",system-ui,sans-serif;
+  font-weight:700;
+  letter-spacing:-.015em;
+  line-height:1.02;
+  text-wrap:balance;
+  margin:0;
+}
+h1{font-size:clamp(2.5rem,6.2vw,4.6rem)}
+h2{font-size:clamp(1.95rem,4.1vw,3.1rem)}
+h3{font-size:clamp(1.25rem,2vw,1.6rem); line-height:1.12}
+p{margin:0}
+
+.rot{
+  font-family:"Alegreya Sans","Segoe UI",system-ui,sans-serif;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:.72rem;
+  line-height:1.4;
+}
+.ui{font-family:"Alegreya Sans","Segoe UI",system-ui,sans-serif}
+.num{font-variant-numeric:tabular-nums}
+.sp{font-style:italic; font-family:"Alegreya",Georgia,serif}
+
+:where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{
+  outline:3px solid var(--realce);
+  outline-offset:3px;
+  border-radius:6px;
+}
+
+/* ---------- estrutura ---------- */
+.env{width:min(100% - 2.5rem, var(--medida)); margin-inline:auto}
+.sec{position:relative; padding-block:clamp(4rem,8vw,7rem)}
+.faixa{position:relative; isolation:isolate}
+.faixa > .env{position:relative; z-index:2}
+.pat{position:absolute; inset:0; z-index:0; opacity:.14; pointer-events:none}
+@supports ((mask-image:url("")) or (-webkit-mask-image:url(""))){
+  .pat{
+    background-color:currentColor;
+    -webkit-mask-image:var(--flor); mask-image:var(--flor);
+    -webkit-mask-size:128px 128px; mask-size:128px 128px;
+    -webkit-mask-repeat:repeat; mask-repeat:repeat;
+  }
+}
+.f-terra{background:var(--faixa-terra); color:var(--faixa-terra-tinta)}
+.f-mata {background:var(--faixa-mata);  color:var(--faixa-mata-tinta)}
+.f-esc  {background:var(--faixa-esc);   color:var(--faixa-esc-tinta)}
+.f-ouro {background:var(--faixa-ouro);  color:var(--faixa-ouro-tinta)}
+.f-lima {background:var(--faixa-lima);  color:var(--faixa-lima-tinta)}
+.f-carta{background:var(--carta-2); color:var(--tinta)}
+
+/* onda orgânica entre faixas — linguagem dos posts da marca */
+.onda{display:block; width:100%; height:clamp(38px,5vw,74px); position:relative; z-index:3; margin-bottom:-1px}
+.onda.topo{margin-bottom:0; margin-top:-1px}
+.onda path{fill:currentColor}
+
+.cab-sec{display:flex; flex-direction:column; gap:.9rem; max-width:44ch; margin-bottom:2.6rem}
+.cab-sec--largo{max-width:46rem}
+.cab-sec .rot{opacity:.75}
+.cab-sec p{font-size:1.08rem; opacity:.9}
+.centro{margin-inline:auto; text-align:center; align-items:center; max-width:56ch}
+.leitura{max-width:64ch}
+
+/* ---------- botões ---------- */
+.bt{
+  display:inline-flex; align-items:center; gap:.55rem;
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:700;
+  font-size:1rem; letter-spacing:.01em;
+  padding:.85rem 1.5rem; border-radius:999px;
+  border:2px solid transparent; cursor:pointer;
+  text-decoration:none; white-space:nowrap;
+  transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease;
+}
+.bt:hover{transform:translateY(-2px)}
+.bt--forte{background:var(--realce); color:var(--realce-tinta); box-shadow:var(--sombra)}
+.bt--forte:hover{box-shadow:var(--sombra-alta)}
+.bt--claro{background:#fff; color:var(--terra-esc); box-shadow:var(--sombra)}
+.bt--vidro{
+  border-color:color-mix(in srgb, currentColor 34%, transparent);
+  background:rgba(255,255,255,.24);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45), var(--sombra);
+}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .bt--vidro{
+    background:rgba(255,255,255,.16);
+    -webkit-backdrop-filter:blur(14px) saturate(1.6);
+    backdrop-filter:blur(14px) saturate(1.6);
+  }
+}
+.bt--vidro:hover{background:rgba(255,255,255,.4)}
+.bt--p{padding:.55rem 1.05rem; font-size:.9rem}
+
+/* ---------- topo ---------- */
+
+.topo{
+  position:sticky; top:0; z-index:60;
+  background:color-mix(in srgb, var(--papel) 88%, transparent);
+  backdrop-filter:blur(14px) saturate(1.2);
+  -webkit-backdrop-filter:blur(14px) saturate(1.2);
+  border-bottom:1px solid transparent;
+  transition:border-color .25s ease, box-shadow .25s ease;
+}
+.topo.fix{border-bottom-color:var(--linha); box-shadow:0 8px 24px -18px rgba(44,27,15,.6)}
+.topo__in{display:flex; align-items:center; gap:1.5rem; padding-block:.7rem}
+.topo__logo{height:44px; width:auto}
+
+/* troca de arte conforme o tema do visitante */
+.so-claro{display:block}
+.so-escuro{display:none}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .so-claro{display:none}
+  :root:not([data-theme="light"]) .so-escuro{display:block}
+}
+:root[data-theme="dark"] .so-claro{display:none}
+:root[data-theme="dark"] .so-escuro{display:block}
+
+.nav{display:flex; gap:1.4rem; margin-left:auto; align-items:center}
+.nav a{
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:600; font-size:.94rem;
+  text-decoration:none; padding:.3rem 0; position:relative; color:var(--tinta-2);
+  transition:color .18s ease;
+}
+.nav a::after{
+  content:""; position:absolute; left:0; right:0; bottom:-2px; height:2px;
+  background:var(--realce); transform:scaleX(0); transform-origin:left;
+  transition:transform .22s ease;
+}
+.nav a:hover{color:var(--tinta)}
+.nav a:hover::after{transform:scaleX(1)}
+.topo__acoes{display:flex; align-items:center; gap:.6rem; margin-left:.4rem}
+@media (max-width:1040px){ .nav{display:none} .topo__acoes{margin-left:auto} }
+
+.bt-carrinho{
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:var(--realce); color:var(--realce-tinta);
+  border:none; border-radius:999px; padding:.6rem 1.15rem;
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:700; font-size:.92rem;
+  cursor:pointer; transition:transform .18s ease;
+}
+.bt-carrinho:hover{transform:translateY(-2px)}
+.bt-carrinho__n{
+  background:var(--ouro); color:#3A2408; border-radius:999px;
+  min-width:1.4em; padding:0 .35em; text-align:center; font-size:.82rem;
+  font-variant-numeric:tabular-nums;
+}
+
+/* ---------- herói ---------- */
+.heroi{color:var(--faixa-ouro-tinta); background:var(--faixa-ouro); position:relative; overflow:hidden}
+.heroi .pat{opacity:.13}
+.heroi__grade{
+  display:grid; grid-template-columns:1.15fr .85fr; gap:clamp(2rem,5vw,4.5rem);
+  align-items:center; padding-block:clamp(3rem,7vw,5.5rem) clamp(2rem,5vw,3.5rem);
+}
+@media (max-width:900px){ .heroi__grade{grid-template-columns:1fr; padding-bottom:1rem} }
+.heroi h1{color:var(--faixa-ouro-tinta)}
+.heroi h1 em{font-style:normal; color:var(--heroi-realce)}
+.heroi__sub{font-size:clamp(1.05rem,1.6vw,1.24rem); max-width:52ch; margin-top:1.35rem; opacity:.94}
+.heroi__ctas{display:flex; flex-wrap:wrap; gap:.8rem; margin-top:2.1rem}
+.heroi__meta{display:flex; flex-wrap:wrap; gap:1.6rem; margin-top:2.6rem; align-items:center}
+.heroi__meta .rot{opacity:.85}
+.heroi__selo{width:104px; height:auto; flex:none}
+.selo__sigla{font-family:"Josefin Sans",system-ui,sans-serif; font-weight:600; font-size:52px; text-anchor:middle; letter-spacing:1px}
+
+.heroi__foto{position:relative; justify-self:center; padding-inline:2.4rem}
+.trio{display:flex; align-items:flex-end; justify-content:center}
+.trio .pote{margin-inline:-24px; filter:drop-shadow(0 22px 30px rgba(80,48,4,.34))}
+.trio .pote:nth-child(1){--pw:152px; transform:rotate(-6deg) translateY(16px); z-index:1}
+.trio .pote:nth-child(2){--pw:214px; z-index:3}
+.trio .pote:nth-child(3){--pw:152px; transform:rotate(6deg) translateY(16px); z-index:2}
+@media (max-width:520px){
+  .trio .pote:nth-child(1),.trio .pote:nth-child(3){--pw:112px}
+  .trio .pote:nth-child(2){--pw:158px}
+}
+.eti{
+  position:absolute; background:var(--carta); color:var(--tinta);
+  border-radius:999px; padding:.5rem .95rem; box-shadow:var(--sombra);
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:700; font-size:.84rem;
+  display:flex; align-items:center; gap:.45rem; white-space:nowrap; z-index:5;
+}
+.eti::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--lima)}
+.eti--1{top:6%; left:-2%}
+.eti--2{bottom:6%; right:-2%}
+.eti--2::before{background:var(--ouro)}
+@media (max-width:900px){ .eti--1{left:0} .eti--2{right:0} }
+
+/* ---------- faixa de garantias ---------- */
+.garantias{background:var(--faixa-esc); color:var(--faixa-esc-tinta)}
+.garantias__in{
+  display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem 2rem;
+  padding-block:1.1rem;
+}
+.garantias span{
+  display:flex; align-items:center; gap:.5rem;
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:600; font-size:.88rem;
+}
+.garantias svg{width:17px; height:17px; flex:none; color:var(--ouro)}
+
+/* ---------- duas colunas genéricas ---------- */
+.duplo{display:grid; grid-template-columns:1fr 1fr; gap:clamp(2rem,5vw,4rem); align-items:center}
+@media (max-width:880px){ .duplo{grid-template-columns:1fr} }
+
+/* ---------- uso: alimento e cuidado ---------- */
+.usos{display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; margin-top:.5rem}
+@media (max-width:700px){ .usos{grid-template-columns:1fr} }
+.uso{
+  background:var(--carta); border:1px solid var(--linha); border-radius:var(--raio);
+  padding:1.8rem; display:flex; flex-direction:column; gap:.8rem;
+}
+.uso__ic{
+  width:46px; height:46px; border-radius:14px; display:grid; place-items:center;
+  background:color-mix(in srgb, var(--ouro) 30%, transparent); color:var(--terra-esc);
+}
+.uso__ic svg{width:24px; height:24px}
+.uso h3{font-size:1.35rem}
+.uso ul{margin:.3rem 0 0; padding-left:1.1rem; display:flex; flex-direction:column; gap:.4rem}
+.uso li{font-size:.98rem}
+.nota-legal{
+  margin-top:1.6rem; font-size:.86rem; color:var(--tinta-2);
+  border-left:3px solid var(--linha); padding-left:.9rem; max-width:70ch;
+  font-family:"Alegreya Sans",system-ui,sans-serif;
+}
+
+/* ============================================================
+   POTE — reprodução do rótulo real em HTML/CSS
+   ============================================================ */
+.pote{
+  --mel-cor:#E0A63A;
+  --mel-cor-esc:#B87A21;
+  width:var(--pw,190px); flex:none; position:relative;
+  filter:drop-shadow(0 18px 26px rgba(44,27,15,.28));
+}
+.pote__tampa{
+  height:calc(var(--pw,190px) * .115); width:86%; margin:0 auto;
+  background:linear-gradient(180deg,#F4F1EC,#D6CEC3 55%,#B3AA9E);
+  border-radius:7px 7px 4px 4px;
+  box-shadow:inset 0 -2px 3px rgba(0,0,0,.14);
+}
+.pote__vidro{
+  position:relative; overflow:hidden;
+  border-radius:14px 14px 20px 20px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.4) 0 6%, rgba(255,255,255,0) 22% 78%, rgba(0,0,0,.16) 95% 100%),
+    linear-gradient(180deg, var(--mel-cor), var(--mel-cor-esc));
+  aspect-ratio:.76;
+  border:1px solid rgba(0,0,0,.14);
+}
+.pote__brilho{
+  position:absolute; top:5%; left:8%; width:10%; height:80%;
+  border-radius:99px; background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,.06));
+}
+.pote__rot{
+  position:absolute; left:-1px; right:-1px; top:22%; height:60%;
+  background:#F4EFE5; color:var(--mel-cor-esc);
+  display:flex; flex-direction:column; overflow:hidden;
+  box-shadow:inset 0 1px 0 rgba(0,0,0,.06), inset 0 -1px 0 rgba(0,0,0,.06);
+}
+.pote__arco{
+  background:var(--mel-cor); flex:none; display:grid; place-items:center;
+  padding:2% 8%;
+}
+.pote__arco--t{height:38%; border-radius:0 0 46% 46% / 0 0 62% 62%; align-items:start; padding-top:5%}
+.pote__arco--b{height:34%; border-radius:46% 46% 0 0 / 62% 62% 0 0; margin-top:auto; align-items:end; padding-bottom:5%}
+.pote__logo{width:56%; max-width:88px; height:auto; opacity:.97}
+.pote__nome{
+  flex:1; display:grid; place-content:center; text-align:center; padding:0 7%;
+  font-family:"Josefin Sans",system-ui,sans-serif; line-height:1;
+}
+.pote__nome small{display:block; font-size:calc(var(--pw,190px) * .056); font-weight:400; opacity:.8}
+.pote__nome b{display:block; font-size:calc(var(--pw,190px) * .108); font-weight:600; letter-spacing:-.015em; margin-top:.12em}
+.pote__base{
+  text-align:center; color:#fff; font-family:"Josefin Sans",system-ui,sans-serif; line-height:1.15;
+}
+.pote__base small{display:block; font-size:calc(var(--pw,190px) * .039); opacity:.92}
+.pote__base b{display:block; font-size:calc(var(--pw,190px) * .062); font-weight:500}
+
+/* fotos dos produtos (mockups do artista) — os potes são SVG sem fundo, os frascos JPG com fundo branco,
+   enquadrados com a sombra lateral inteira e o reflexo encurtado */
+.pote--foto img{display:block; width:100%; height:auto; aspect-ratio:.94; object-fit:contain}
+.frasco--foto img{display:block; width:100%; height:auto}
+/* a foto ocupa o card de borda a borda: a sombra se dissolve no branco do card */
+.frasco.frasco--foto{filter:none}
+.prod .frasco.frasco--foto{width:calc(100% + 2.4rem); margin:-1.5rem -1.2rem 0; border-radius:var(--raio) var(--raio) 0 0; overflow:hidden}
+
+/* frasco de própolis */
+.frasco{
+  --mel-cor:#8A5A1E;
+  width:var(--pw,120px); flex:none; position:relative;
+  filter:drop-shadow(0 14px 22px rgba(44,27,15,.3));
+}
+.frasco__conta{height:calc(var(--pw,120px)*.16); width:44%; margin:0 auto; background:linear-gradient(180deg,#4A3B31,#2E241D); border-radius:5px 5px 2px 2px}
+.frasco__gargalo{height:calc(var(--pw,120px)*.07); width:34%; margin:0 auto; background:linear-gradient(90deg,#6A4B24,#8A6733,#5A3E1E)}
+.frasco__corpo{
+  position:relative; overflow:hidden; aspect-ratio:.56; border-radius:6px 6px 10px 10px;
+  background:linear-gradient(90deg,rgba(255,255,255,.3) 0 8%, rgba(255,255,255,0) 24% 78%, rgba(0,0,0,.22) 95% 100%),
+             linear-gradient(180deg,var(--mel-cor),#3E2810);
+}
+.frasco__rot{
+  position:absolute; left:-1px; right:-1px; top:22%; bottom:14%;
+  background:#F4EFE5; color:#8A5A1E; display:flex; flex-direction:column; align-items:center;
+  justify-content:center; gap:.15em; text-align:center; padding:6% 8%;
+  font-family:"Josefin Sans",system-ui,sans-serif; line-height:1.05;
+}
+.frasco__rot .t{font-size:calc(var(--pw,120px)*.075); opacity:.8}
+.frasco__rot .n{font-size:calc(var(--pw,120px)*.13); font-weight:600}
+.frasco__rot .v{font-size:calc(var(--pw,120px)*.07); background:var(--mel-cor); color:#fff; border-radius:99px; padding:.1em .7em; margin-top:.25em}
+
+/* ============================================================
+   MESA DE DEGUSTAÇÃO
+   ============================================================ */
+.mesa{display:grid; grid-template-columns:300px 1fr; gap:clamp(1.6rem,4vw,3.4rem); align-items:start}
+@media (max-width:940px){ .mesa{grid-template-columns:1fr} }
+
+.mesa__palco{
+  background:var(--carta); border:1px solid var(--linha); border-radius:var(--raio);
+  padding:1.6rem 1.2rem 1.4rem; display:flex; flex-direction:column; align-items:center; gap:1.2rem;
+  box-shadow:var(--sombra); position:sticky; top:88px;
+}
+@media (max-width:940px){ .mesa__palco{position:static} }
+.mesa__palco .pote{--pw:214px; transition:opacity .25s ease, transform .25s ease}
+.mesa__palco.trocando .pote{opacity:0; transform:translateY(10px)}
+.mesa__preco{text-align:center; display:flex; flex-direction:column; gap:.15rem}
+.mesa__preco .v{font-family:"Josefin Sans",system-ui,sans-serif; font-size:1.9rem; font-weight:600; font-variant-numeric:tabular-nums}
+.mesa__preco .u{font-size:.82rem; color:var(--tinta-2); font-family:"Alegreya Sans",system-ui,sans-serif}
+
+.mesa__abas{display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.6rem}
+.aba{
+  display:flex; align-items:center; gap:.5rem;
+  background:var(--carta); border:1.5px solid var(--linha); color:var(--tinta-2);
+  border-radius:999px; padding:.45rem .95rem .45rem .5rem; cursor:pointer;
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:700; font-size:.92rem;
+  transition:border-color .2s ease, color .2s ease, background-color .2s ease, transform .2s ease;
+}
+.aba:hover{transform:translateY(-2px)}
+.aba__gota{width:18px; height:18px; border-radius:50%; flex:none; box-shadow:inset 0 -3px 6px rgba(0,0,0,.2)}
+.aba[aria-selected="true"]{border-color:var(--realce); color:var(--tinta); background:var(--carta)}
+
+.ficha{display:flex; flex-direction:column; gap:1.5rem}
+.ficha__topo{display:flex; flex-wrap:wrap; align-items:baseline; gap:.4rem 1rem}
+.ficha__topo h3{font-size:clamp(1.7rem,3vw,2.3rem)}
+.ficha__esp{color:var(--tinta-2); font-size:1rem}
+.ficha__res{font-size:1.1rem; max-width:60ch}
+
+.perfil{display:flex; flex-direction:column; gap:.7rem}
+.linha-perfil{display:grid; grid-template-columns:9.5rem 1fr; gap:.9rem; align-items:center}
+@media (max-width:520px){ .linha-perfil{grid-template-columns:7rem 1fr; gap:.6rem} }
+.linha-perfil .rot{color:var(--tinta-2); letter-spacing:.1em}
+.barra{height:9px; background:var(--linha); border-radius:99px; overflow:hidden}
+.barra i{
+  display:block; height:100%; border-radius:99px; width:0;
+  background:linear-gradient(90deg,var(--ouro),var(--terra));
+  transition:width .7s cubic-bezier(.22,1,.36,1);
+}
+.perfil__legenda{font-size:.84rem; color:var(--tinta-2); font-family:"Alegreya Sans",system-ui,sans-serif; margin-top:.15rem}
+
+.chips{display:flex; flex-wrap:wrap; gap:.45rem}
+.chip{
+  background:color-mix(in srgb, var(--ouro) 24%, transparent);
+  border:1px solid color-mix(in srgb, var(--mel) 34%, transparent);
+  color:var(--tinta); border-radius:999px; padding:.3rem .8rem;
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:600; font-size:.86rem;
+}
+.pares{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:1rem}
+.par{background:var(--carta-2); border-radius:var(--raio-p); padding:.95rem 1.1rem}
+.par .rot{color:var(--tinta-2); margin-bottom:.3rem}
+.par p{font-size:.97rem}
+.ficha__acoes{display:flex; flex-wrap:wrap; gap:.7rem; align-items:center; padding-top:.3rem}
+
+/* ---------- grade de produtos ---------- */
+.produtos{display:grid; grid-template-columns:repeat(auto-fill,minmax(215px,1fr)); gap:1.3rem}
+.prod{
+  background:var(--carta); border:1px solid var(--linha); border-radius:var(--raio);
+  padding:1.5rem 1.2rem 1.2rem; display:flex; flex-direction:column; align-items:center;
+  gap:.75rem; text-align:center; transition:transform .22s ease, box-shadow .22s ease;
+}
+.prod:hover{transform:translateY(-5px); box-shadow:var(--sombra-alta)}
+.prod .pote{--pw:132px}
+.prod .frasco{--pw:98px}
+.prod__cab{display:flex; flex-direction:column; gap:.2rem; margin-top:.4rem}
+.prod__cab h3{font-size:1.3rem}
+.prod__cab .sp{font-size:.87rem; color:var(--tinta-2)}
+.prod__nota{font-size:.94rem; color:var(--tinta-2); min-height:3.2em}
+.prod__pe{display:flex; align-items:center; justify-content:space-between; gap:.7rem; width:100%; margin-top:auto; padding-top:.6rem}
+.prod__preco{font-family:"Josefin Sans",system-ui,sans-serif; font-size:1.28rem; font-weight:600; font-variant-numeric:tabular-nums}
+.prod__preco small{display:block; font-size:.72rem; font-weight:400; color:var(--tinta-2); letter-spacing:.04em; font-family:"Alegreya Sans",system-ui,sans-serif}
+#grade-propolis{grid-template-columns:repeat(3,1fr)}
+@media (max-width:820px){ #grade-propolis{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:520px){ #grade-propolis{grid-template-columns:1fr} }
+
+/* ---------- comparativo ---------- */
+.tab-rolo{
+  overflow-x:auto; border-radius:var(--raio);
+  border:1px solid rgba(255,255,255,.34);
+  background:rgba(255,255,255,.16);
+  box-shadow:0 26px 54px -26px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.26);
+}
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .tab-rolo{
+    background:rgba(255,255,255,.1);
+    -webkit-backdrop-filter:blur(18px) saturate(1.5);
+    backdrop-filter:blur(18px) saturate(1.5);
+  }
+}
+table.comp{width:100%; border-collapse:collapse; min-width:620px; background:transparent}
+table.comp th, table.comp td{padding:.95rem 1.15rem; text-align:left; border-bottom:1px solid rgba(255,255,255,.26); font-size:.98rem}
+table.comp thead th{
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:800; text-transform:uppercase;
+  letter-spacing:.1em; font-size:.72rem; background:rgba(0,0,0,.22);
+}
+table.comp tbody th{font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:700; font-size:.9rem; opacity:.85}
+table.comp td:first-of-type{font-weight:700}
+table.comp tr:last-child th, table.comp tr:last-child td{border-bottom:none}
+.destaque-col{background:rgba(255,255,255,.14)}
+
+/* ---------- processo ---------- */
+.passos{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:1.6rem 1.3rem; counter-reset:p}
+.passo{display:flex; flex-direction:column; gap:.6rem; position:relative; padding-top:2.6rem}
+.passo::before{
+  counter-increment:p; content:counter(p,decimal-leading-zero);
+  position:absolute; top:0; left:0;
+  font-family:"Josefin Sans",system-ui,sans-serif; font-size:2.1rem; font-weight:300;
+  opacity:.45; font-variant-numeric:tabular-nums; line-height:1;
+}
+.passo::after{content:""; position:absolute; top:1.15rem; left:2.9rem; right:0; height:1px; background:currentColor; opacity:.24}
+.passo h3{font-size:1.16rem}
+.passo p{font-size:.97rem; opacity:.9}
+
+
+.fotos{display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem}
+.fotos img, .foto-vazia{border-radius:var(--raio); width:100%; aspect-ratio:4/3; object-fit:cover}
+.foto-vazia{
+  position:relative; overflow:hidden;
+  border:1.5px dashed color-mix(in srgb, currentColor 40%, transparent);
+  background:var(--carta-2);
+  display:grid; place-items:center; text-align:center; padding:1.2rem; gap:.5rem;
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-size:.86rem; opacity:.9;
+}
+.foto-vazia > *{position:relative; z-index:2}
+.foto-vazia::before{
+  content:""; position:absolute; inset:0; z-index:1; opacity:.3; color:var(--mel);
+}
+@supports ((mask-image:url("")) or (-webkit-mask-image:url(""))){
+  .foto-vazia::before{
+    background-color:currentColor;
+    -webkit-mask-image:var(--flor); mask-image:var(--flor);
+    -webkit-mask-size:112px 112px; mask-size:112px 112px;
+    -webkit-mask-repeat:repeat; mask-repeat:repeat;
+  }
+}
+/* a faixa escura do comparativo já traz respiro próprio */
+#preco{padding-bottom:0}
+.foto-vazia svg{width:26px; height:26px; opacity:.6; margin-inline:auto}
+
+/* ---------- produtor ---------- */
+.retrato{position:relative}
+.retrato img, .retrato .foto-vazia{
+  width:100%; aspect-ratio:4/5; object-fit:cover;
+  border-radius:200px 200px 24px 24px;
+}
+.creds{display:flex; flex-direction:column; gap:.85rem; margin-top:1.6rem}
+.cred{display:flex; gap:.8rem; align-items:flex-start}
+.cred svg{width:20px; height:20px; flex:none; margin-top:.28rem; color:var(--folha)}
+.cred b{display:block; font-family:"Alegreya Sans",system-ui,sans-serif; font-size:1rem; font-weight:700}
+.cred span{display:block; font-size:.96rem; color:var(--tinta-2); font-weight:400}
+
+/* ---------- cursos ---------- */
+.cursos{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.3rem}
+.curso{
+  background:var(--carta); border:1px solid var(--linha); border-radius:var(--raio);
+  padding:1.7rem; display:flex; flex-direction:column; gap:.7rem;
+  border-top:5px solid var(--curso-cor,var(--terra));
+}
+.curso h3{font-size:1.28rem}
+.curso p{font-size:.97rem; color:var(--tinta-2); flex:1}
+.curso ul{margin:0; padding-left:1.1rem; display:flex; flex-direction:column; gap:.3rem; font-size:.93rem}
+
+/* ---------- kits ---------- */
+.kits{display:grid; grid-template-columns:repeat(auto-fit,minmax(268px,1fr)); gap:1.3rem; align-items:stretch}
+.kit{
+  background:var(--carta); border:1px solid var(--linha); border-radius:var(--raio);
+  padding:1.8rem; display:flex; flex-direction:column; gap:.9rem; position:relative;
+}
+.kit--destaque{border:2px solid var(--realce); box-shadow:var(--sombra-alta)}
+.kit__tag{
+  position:absolute; top:-.85rem; left:1.6rem; background:var(--realce); color:var(--realce-tinta);
+  border-radius:999px; padding:.25rem .8rem;
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:800; font-size:.72rem;
+  text-transform:uppercase; letter-spacing:.1em;
+}
+.kit h3{font-size:1.4rem}
+.kit__v{display:flex; align-items:baseline; gap:.5rem}
+.kit__v b{font-family:"Josefin Sans",system-ui,sans-serif; font-size:2rem; font-weight:600; font-variant-numeric:tabular-nums}
+.kit__v s{color:var(--tinta-2); font-size:.95rem}
+.kit ul{margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:.5rem; flex:1}
+.kit li{display:flex; gap:.55rem; align-items:flex-start; font-size:.96rem}
+.kit li svg{width:16px; height:16px; flex:none; margin-top:.35rem; color:var(--folha)}
+
+/* ---------- entrega ---------- */
+.entregas{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.3rem}
+.entrega{display:flex; flex-direction:column; gap:.55rem}
+.entrega__ic{width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:rgba(255,255,255,.16)}
+.entrega__ic svg{width:22px; height:22px}
+.entrega h3{font-size:1.1rem}
+.entrega p{font-size:.95rem; opacity:.9}
+
+
+/* ---------- rodapé ---------- */
+.rodape{background:var(--faixa-esc); color:var(--faixa-esc-tinta); padding-block:3.5rem 2rem}
+.rodape__grade{display:grid; grid-template-columns:1.5fr 1fr 1fr 1.2fr; gap:2.2rem}
+@media (max-width:820px){ .rodape__grade{grid-template-columns:1fr 1fr} }
+@media (max-width:520px){ .rodape__grade{grid-template-columns:1fr} }
+.rodape h4{font-size:1rem; margin-bottom:.9rem; color:var(--ouro); font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:.12em}
+.rodape ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5rem}
+.rodape a{text-decoration:none; opacity:.88; font-size:.95rem; font-family:"Alegreya Sans",system-ui,sans-serif}
+.rodape a:hover{opacity:1; text-decoration:underline}
+.rodape__logo{height:56px; width:auto; margin-bottom:1rem}
+.rodape__legal{
+  border-top:1px solid rgba(255,255,255,.16); margin-top:2.6rem; padding-top:1.4rem;
+  display:flex; flex-wrap:wrap; gap:.7rem 1.6rem; justify-content:space-between;
+  font-size:.82rem; opacity:.72; font-family:"Alegreya Sans",system-ui,sans-serif;
+}
+
+/* ---------- carrinho ---------- */
+.veu{
+  position:fixed; inset:0; background:rgba(28,16,8,.55); z-index:90;
+  opacity:0; pointer-events:none; transition:opacity .28s ease;
+  backdrop-filter:blur(3px); -webkit-backdrop-filter:blur(3px);
+}
+body.carrinho-aberto .veu{opacity:1; pointer-events:auto}
+.gaveta{
+  position:fixed; top:0; right:0; bottom:0; width:min(420px,100%); z-index:91;
+  background:var(--papel); color:var(--tinta); display:flex; flex-direction:column;
+  transform:translateX(102%); transition:transform .34s cubic-bezier(.4,0,.2,1);
+  box-shadow:var(--sombra-alta);
+}
+body.carrinho-aberto .gaveta{transform:none}
+.gaveta__cab{display:flex; align-items:center; justify-content:space-between; padding:1.3rem 1.4rem; border-bottom:1px solid var(--linha)}
+.gaveta__cab h3{font-size:1.3rem}
+.x{background:none; border:none; cursor:pointer; width:36px; height:36px; border-radius:50%; display:grid; place-items:center; color:var(--tinta-2)}
+.x:hover{background:var(--carta-2); color:var(--tinta)}
+.x svg{width:18px; height:18px}
+.gaveta__itens{flex:1; overflow-y:auto; padding:1.1rem 1.4rem; display:flex; flex-direction:column; gap:1rem}
+.item{display:grid; grid-template-columns:1fr auto; gap:.4rem 1rem; align-items:center; padding-bottom:1rem; border-bottom:1px solid var(--linha)}
+.item:last-child{border-bottom:none}
+.item__n{font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:700; font-size:.97rem; line-height:1.25}
+.item__n span{display:block; font-weight:400; font-size:.83rem; color:var(--tinta-2)}
+.item__v{font-family:"Josefin Sans",system-ui,sans-serif; font-weight:600; font-variant-numeric:tabular-nums}
+.qt{display:inline-flex; justify-self:start; align-items:center; gap:.15rem; border:1px solid var(--linha); border-radius:999px; padding:.1rem}
+.qt button{width:26px; height:26px; border:none; background:none; cursor:pointer; border-radius:50%; color:var(--tinta-2); font-size:1rem; line-height:1}
+.qt button:hover{background:var(--carta-2); color:var(--realce)}
+.qt span{min-width:1.6em; text-align:center; font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:700; font-size:.9rem; font-variant-numeric:tabular-nums}
+.gaveta__vazio{margin:auto; text-align:center; color:var(--tinta-2); display:flex; flex-direction:column; gap:.8rem; align-items:center; padding:2rem}
+.gaveta__vazio img{width:64px; opacity:.5}
+.gaveta__pe{border-top:1px solid var(--linha); padding:1.2rem 1.4rem 1.5rem; display:flex; flex-direction:column; gap:.9rem}
+.gaveta__tot{display:flex; justify-content:space-between; align-items:baseline}
+.gaveta__tot b{font-family:"Josefin Sans",system-ui,sans-serif; font-size:1.6rem; font-weight:600; font-variant-numeric:tabular-nums}
+.gaveta__pe .bt{justify-content:center; width:100%}
+.gaveta__obs{font-size:.8rem; color:var(--tinta-2); text-align:center; font-family:"Alegreya Sans",system-ui,sans-serif}
+
+/* ---------- zap flutuante ---------- */
+.zap{
+  /* bottom alto para ficar acima do selo "Powered by Netlify" que o Netlify injeta no canto */
+  position:fixed; right:1.1rem; bottom:4.4rem; z-index:70;
+  width:56px; height:56px; border-radius:50%; background:#25D366; color:#0B3D22;
+  display:grid; place-items:center; box-shadow:var(--sombra-alta); text-decoration:none;
+  transition:transform .2s ease;
+}
+.zap:hover{transform:scale(1.07)}
+.zap svg{width:28px; height:28px}
+@media (max-width:520px){ .zap{width:50px; height:50px; bottom:4rem; right:.85rem} }
+
+/* ---------- marcação de conteúdo pendente ---------- */
+[data-pend]{position:relative}
+body.ver-pendentes [data-pend]{
+  outline:1.5px dashed var(--realce); outline-offset:4px; border-radius:4px;
+}
+body.ver-pendentes [data-pend]::after{
+  content:attr(data-pend);
+  position:absolute; top:-.7rem; left:0; z-index:40;
+  background:var(--realce); color:var(--realce-tinta);
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-weight:700; font-size:.62rem;
+  text-transform:uppercase; letter-spacing:.08em;
+  padding:.1rem .45rem; border-radius:99px; white-space:nowrap; pointer-events:none;
+}
+.bt-pend{
+  background:none; border:1px solid rgba(255,255,255,.3); color:inherit;
+  border-radius:999px; padding:.35rem .85rem; cursor:pointer;
+  font-family:"Alegreya Sans",system-ui,sans-serif; font-size:.78rem; font-weight:600;
+}
+.bt-pend:hover{background:rgba(255,255,255,.12)}
+
+/* ---------- revelação no scroll ---------- */
+.rev{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1)}
+.rev.vis{opacity:1; transform:none}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important; transition-duration:.001ms !important; scroll-behavior:auto !important}
+  .rev{opacity:1; transform:none}
+}
+</style>
+<!--ARTIFACT:HEAD-END-->
+</head>
+<body>
+<!--ARTIFACT:BODY-START-->
+
+<header class="topo" id="topo">
+  <div class="env topo__in">
+    <a href="#topo" aria-label="Melibees — início">
+      <img class="topo__logo so-claro" src="assets/logo-terracota.png" alt="Melibees — produtos das abelhas">
+      <img class="topo__logo so-escuro" src="assets/logo-branco.png" alt="Melibees — produtos das abelhas">
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#degustacao">Mel</a>
+      <a href="#propolis">Própolis</a>
+      <a href="#preco">Por que é diferente</a>
+      <a href="#producao">Produção</a>
+      <a href="#ricardo">O produtor</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#kits">Kits</a>
+    </nav>
+    <div class="topo__acoes">
+      <button class="bt-carrinho" id="abrir-carrinho" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="17" height="17" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        Carrinho <span class="bt-carrinho__n num" id="carrinho-n">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ HERÓI ============================ -->
+<section class="heroi f-terra">
+  <div class="pat" aria-hidden="true"></div>
+  <div class="env heroi__grade">
+    <div>
+      <p class="rot">Meliponicultura artesanal · Joinville, Santa Catarina</p>
+      <h1 style="margin-top:1.1rem">Cinco abelhas.<br>Cinco méis.<br><em>Cinco sabores</em> que você ainda não provou.</h1>
+      <div class="heroi__ctas">
+        <a class="bt bt--forte" href="#degustacao">Ir para a mesa de degustação</a>
+        <a class="bt bt--vidro" href="https://wa.me/5547988478238?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Melibees%20e%20quero%20saber%20mais%20sobre%20os%20m%C3%A9is." target="_blank" rel="noopener">Entrar em contato</a>
+      </div>
+      <div class="heroi__meta">
+        <!-- selo refeito: PNG original com a sigla ASF apagada por máscara e ANSF escrito por cima.
+             Provisório até chegar o arquivo oficial com ANSF. -->
+        <svg class="heroi__selo" viewBox="0 0 420 420" role="img" aria-label="Selo ANSF — Abelhas Sem Ferrão">
+          <mask id="selo-sem-sigla-h"><rect width="420" height="420" fill="#fff"/><rect x="145" y="44" width="130" height="52" fill="#000"/></mask>
+          <g class="so-claro"><image href="assets/selo-asf-escuro.png" width="420" height="420" mask="url(#selo-sem-sigla-h)"/><text class="selo__sigla" x="210" y="89" fill="#000">ANSF</text></g>
+          <g class="so-escuro"><image href="assets/selo-asf-branco.png" width="420" height="420" mask="url(#selo-sem-sigla-h)"/><text class="selo__sigla" x="210" y="89" fill="#fff">ANSF</text></g>
+        </svg>
+        <p class="rot" style="line-height:1.75; flex:1">Produção 100% de abelhas nativas sem ferrão</p>
+      </div>
+    </div>
+    <div class="heroi__foto">
+      <div class="trio" id="heroi-potes" data-pend="mockup — trocar pelo rótulo final com Selo Arte"></div>
+      <span class="eti eti--1">Espécie no rótulo</span>
+      <span class="eti eti--2">200 g · vidro</span>
+    </div>
+  </div>
+  <svg class="onda" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" style="color:var(--faixa-esc)">
+    <path d="M0,44 C220,88 380,6 620,26 C860,46 1040,92 1260,62 C1340,51 1400,38 1440,30 L1440,80 L0,80 Z"/>
+  </svg>
+</section>
+
+<div class="garantias">
+  <div class="env garantias__in">
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Mel puro, sem adição de nada</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Não contém glúten</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Espécie e lote no rótulo</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Meliponário próprio</span>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Envio para todo o Brasil</span>
+  </div>
+</div>
+
+<!-- ============================ ALIMENTO E CUIDADO ============================ -->
+<section class="sec" id="usos">
+  <div class="env">
+    <div class="cab-sec rev">
+      <p class="rot" style="color:var(--terra)">Duas formas de usar</p>
+      <h2>Na gastronomia e no cuidado diário.</h2>
+      <p>O mel de abelhas sem ferrão, um tesouro da biodiversidade brasileira, transcende a simples doçura: um ingrediente sofisticado para a gastronomia e um aliado natural para o cuidado diário.</p>
+    </div>
+    <div class="usos rev">
+      <article class="uso">
+        <div class="uso__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.7 1.3 3 3 3s3-1.3 3-3V2"/><path d="M6 12v10"/><path d="M18 2c-2 0-3 2.5-3 6s1 5 3 5"/><path d="M18 13v9"/></svg></div>
+        <h3>Na gastronomia</h3>
+        <p style="color:var(--tinta-2); font-size:.98rem">Cinco perfis de sabor diferentes, cada um com o seu lugar à mesa.</p>
+        <ul>
+          <li>Puro, na colher, à temperatura ambiente</li>
+          <li>Com queijos frescos e curados, pães de fermentação natural</li>
+          <li>Em drinques e infusões — o ácido substitui o limão</li>
+          <li>Finalizando carnes, saladas e sobremesas cítricas</li>
+        </ul>
+      </article>
+      <article class="uso">
+        <div class="uso__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg></div>
+        <h3>No cuidado diário</h3>
+        <p style="color:var(--tinta-2); font-size:.98rem">O uso tradicional que atravessou gerações de famílias e comunidades indígenas.</p>
+        <ul>
+          <li>Uma colher pela manhã, como hábito</li>
+          <li>Garganta e vias respiratórias no tempo frio</li>
+          <li>Extrato de própolis diluído em água ou direto na colher</li>
+          <li>Própolis de abelha sem ferrão: resina de espécies nativas</li>
+        </ul>
+      </article>
+    </div>
+    <p class="nota-legal">Apesar de haver comprovação científica, consulte seu profissional de saúde para uma indicação terapêutica do produto. Mel não deve ser oferecido a crianças com menos de 1 ano.</p>
+  </div>
+</section>
+
+<!-- ============================ MESA DE DEGUSTAÇÃO ============================ -->
+<section class="sec f-carta" id="degustacao">
+  <div class="env">
+    <div class="cab-sec cab-sec--largo rev">
+      <p class="rot" style="color:var(--terra)">A mesa de degustação</p>
+      <h2>Escolha o seu mel, descubra seu perfil sensorial favorito.</h2>
+    </div>
+
+    <div class="mesa__abas rev" role="tablist" aria-label="Escolha o mel"></div>
+
+    <div class="mesa">
+      <div class="mesa__palco" id="palco">
+        <div id="palco-pote"></div>
+        <div class="mesa__preco">
+          <span class="v" id="palco-preco">—</span>
+          <span class="u" id="palco-peso">200 g · vidro</span>
+        </div>
+      </div>
+      <div class="ficha" id="ficha" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TODOS OS MELES ============================ -->
+<section class="sec" id="meles">
+  <div class="env">
+    <div class="cab-sec rev">
+      <p class="rot" style="color:var(--terra)">A linha completa</p>
+      <h2>Os cinco méis da casa.</h2>
+    </div>
+    <div class="produtos rev" id="grade-meles"></div>
+  </div>
+</section>
+
+<!-- ============================ PRÓPOLIS ============================ -->
+<section class="faixa f-mata" id="propolis">
+  <svg class="onda topo" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" style="color:var(--papel); transform:scaleY(-1)">
+    <path d="M0,44 C220,88 380,6 620,26 C860,46 1040,92 1260,62 C1340,51 1400,38 1440,30 L1440,80 L0,80 Z"/>
+  </svg>
+  <div class="pat" aria-hidden="true"></div>
+  <div class="env sec" style="padding-block:clamp(2rem,5vw,3.5rem) clamp(3rem,6vw,5rem)">
+    <div class="cab-sec rev">
+      <p class="rot">Extrato de própolis</p>
+      <h2>A resina que a abelha usa para proteger a colônia.</h2>
+      <p>Abelha sem ferrão não produz o própolis verde que você conhece. Cada espécie coleta resinas diferentes da mata e produz um extrato com cor, aroma e caráter próprios. Em frascos de 30 ml e 20 ml, com conta-gotas.</p>
+    </div>
+    <div class="produtos rev" id="grade-propolis"></div>
+  </div>
+  <svg class="onda" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" style="color:var(--papel)">
+    <path d="M0,30 C180,58 420,80 700,52 C920,30 1120,4 1440,44 L1440,80 L0,80 Z"/>
+  </svg>
+</section>
+
+<!-- ============================ POR QUE CUSTA MAIS ============================ -->
+<section class="sec" id="preco">
+  <div class="env">
+    <div class="cab-sec rev">
+      <p class="rot" style="color:var(--terra)">A pergunta que todo mundo faz</p>
+      <h2>Por que nosso mel é diferente dos demais?</h2>
+      <p class="leitura">Não é posicionamento de marca. É aritmética de colmeia. Uma colônia de abelha sem ferrão produz, num ano inteiro, o que uma caixa de <span class="sp">Apis mellifera</span> produz em algumas semanas — e a colheita é feita pote a pote, com seringa, sem espremer nada.</p>
+    </div>
+  </div>
+  <div class="faixa f-esc" style="border-radius:0">
+    <div class="pat" aria-hidden="true"></div>
+    <div class="env" style="padding-block:clamp(2.4rem,5vw,3.4rem)">
+      <div class="tab-rolo rev">
+        <table class="comp">
+          <caption class="rot" style="text-align:left; padding:1rem 1.15rem; opacity:.8">Comparação entre abelha sem ferrão (nativa) e abelha com ferrão (<span class="sp" style="text-transform:none; letter-spacing:0">Apis mellifera</span>)</caption>
+          <thead>
+            <tr>
+              <th scope="col">&nbsp;</th>
+              <th scope="col" class="destaque-col">Abelha sem ferrão</th>
+              <th scope="col">Abelha com ferrão</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Produção por colônia, por ano</th><td class="destaque-col num">1 a 3 litros</td><td class="num">20 a 60 litros</td></tr>
+            <tr><th scope="row">Como se colhe</th><td class="destaque-col">Sucção pote a pote, com seringa ou bomba</td><td>Centrifugação de quadros inteiros</td></tr>
+            <tr><th scope="row">Multiplicação de colônias</th><td class="destaque-col">Em geral uma divisão por ano</td><td>Várias divisões e enxameações por safra</td></tr>
+            <tr><th scope="row">Umidade natural do mel</th><td class="destaque-col">Mais alta — exige maturação e cuidado</td><td>Mais baixa — estável em prateleira</td></tr>
+            <tr><th scope="row">Conservação</th><td class="destaque-col">Refrigerado ou maturado, validade curta após aberto</td><td>Temperatura ambiente</td></tr>
+            <tr><th scope="row">Manejo</th><td class="destaque-col">Sem fumaça, sem traje, colônia a colônia</td><td>Fumigador e equipamento de proteção</td></tr>
+            <tr><th scope="row">Diversidade de sabor</th><td class="destaque-col">Muda a cada espécie de abelha</td><td>Muda conforme a florada</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PRODUÇÃO ============================ -->
+<section class="sec" id="producao">
+  <div class="env">
+    <div class="cab-sec rev">
+      <p class="rot" style="color:var(--terra)">Do meliponário ao pote</p>
+      <h2>Como este mel é produzido.</h2>
+    </div>
+    <div class="passos rev" style="color:var(--tinta)">
+      <article class="passo">
+        <h3>Manejo da colônia</h3>
+        <p>Revisão caixa por caixa, sem fumaça e sem traje. Avaliação de postura da rainha, reservas de pólen e sanidade antes de qualquer colheita.</p>
+      </article>
+      <article class="passo">
+        <h3>Maturação nos potes</h3>
+        <p>A abelha desidrata o néctar e fecha o pote de cerume. Só se colhe depois disso — mel de pote aberto ainda não é mel.</p>
+      </article>
+      <article class="passo">
+        <h3>Colheita por sucção</h3>
+        <p>Pote a pote, com seringa ou bomba a vácuo. Nada é espremido, nada é misturado: cada colheita é de uma espécie só.</p>
+      </article>
+      <article class="passo">
+        <h3>Maturação e umidade</h3>
+        <p>Controle de umidade em ambiente fechado, para estabilizar o mel sem pasteurizar e sem descaracterizar o sabor.</p>
+      </article>
+      <article class="passo">
+        <h3>Envase e lote</h3>
+        <p>Vidro de 200 g, rótulo com espécie, nome científico, data de envase e lote. Cada pote volta ao meliponário de origem no papel.</p>
+      </article>
+    </div>
+
+    <div class="fotos rev" style="margin-top:3rem">
+      <img src="assets/foto-ninho-jatai.jpg" alt="Entrada de um ninho de abelhas sem ferrão" data-pend="foto do meliponário do Ricardo">
+      <img src="assets/foto-favo.jpg" alt="Abelha sobre potes de mel" data-pend="foto real da colheita">
+      <img src="assets/foto-manejo.jpg" alt="Manejo de caixas de abelhas" data-pend="foto do manejo — sem traje">
+      <div class="foto-vazia">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-4.6-4.6a2 2 0 0 0-2.8 0L3 21"/></svg>
+        <span>Envase e rotulagem<br>foto a produzir</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec" id="ricardo">
+  <div class="env">
+    <div class="duplo">
+      <div class="retrato rev">
+        <div class="foto-vazia" style="aspect-ratio:4/5; border-radius:200px 200px 24px 24px; color:var(--tinta-2)" data-pend="retrato do Ricardo no meliponário">
+          <div>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+            <span style="display:block; margin-top:.6rem">Retrato do Ricardo<br>no meliponário</span>
+          </div>
+        </div>
+      </div>
+      <div class="rev">
+        <p class="rot" style="color:var(--terra)">Quem produz</p>
+        <h2 style="margin-top:.9rem">Ricardo, meliponicultor.</h2>
+        <p style="margin-top:1.2rem; font-size:1.06rem" data-pend="biografia a escrever com o Ricardo">Ricardo cria abelhas nativas sem ferrão em Joinville, no norte de Santa Catarina, e conduz sozinho todas as etapas: manejo das colônias, colheita, maturação e envase. Não compra mel de terceiros e não mistura espécies — o que sai do meliponário é o que entra no pote.</p>
+        <p style="margin-top:.9rem; color:var(--tinta-2)" data-pend="biografia a escrever com o Ricardo">Além de produzir, ele estuda. Está em formação em análise sensorial e físico-química de mel e em sommelier de mel — as duas coisas que permitem descrever um mel do jeito que se descreve um vinho: cor, viscosidade, aroma, acidez, corpo e retrogosto.</p>
+
+        <div class="creds">
+          <div class="cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><b>Sommelier de mel</b><span>Formação em análise sensorial: identificar e descrever o que diferencia cada mel.</span></div>
+          </div>
+          <div class="cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><b>Análise de mel</b><span>Estudo dos parâmetros de qualidade: umidade, açúcares, acidez e conservação.</span></div>
+          </div>
+          <div class="cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><b>Cursos, workshops e consultoria</b><span>Formação de novos meliponicultores e assessoria para quem quer montar meliponário.</span></div>
+          </div>
+          <div class="cred">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><b>Meliponário próprio</b><span>Colônias de jataí, mandaçaia, guaraipo, bugia, canudo e tubuna sob manejo direto.</span></div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:.7rem; flex-wrap:wrap; margin-top:2rem">
+          <a class="bt bt--forte" href="https://wa.me/5547988478238?text=Ol%C3%A1%20Ricardo%2C%20vim%20pelo%20site%20e%20queria%20falar%20com%20voc%C3%AA." target="_blank" rel="noopener">Entrar em contato</a>
+          <a class="bt" style="border:2px solid var(--linha)" href="#cursos">Ver cursos e consultoria</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CURSOS ============================ -->
+<section class="sec f-carta" id="cursos">
+  <div class="env">
+    <div class="cab-sec rev">
+      <p class="rot" style="color:var(--terra)">Formação</p>
+      <h2>Cursos, workshops e consultoria.</h2>
+      <p>Quem cria abelha sem ferrão aprende com quem cria abelha sem ferrão. Turmas pequenas, prática no meliponário e acompanhamento depois da aula.</p>
+    </div>
+    <div class="cursos rev" data-pend="formatos, datas e valores a confirmar">
+      <article class="curso" style="--curso-cor:var(--lima)">
+        <p class="rot" style="color:var(--tinta-2)">Presencial · turma pequena</p>
+        <h3>Meliponicultura do zero</h3>
+        <p>Para quem quer ter as primeiras caixas: espécies, legislação, iscas, manejo básico e o calendário do meliponário ao longo do ano.</p>
+        <ul>
+          <li>Aula prática no meliponário</li>
+          <li>Material de apoio impresso</li>
+          <li>Grupo de acompanhamento pós-curso</li>
+        </ul>
+        <a class="bt bt--forte bt--p" style="align-self:flex-start; margin-top:.4rem" href="https://wa.me/5547988478238?text=Quero%20saber%20sobre%20o%20curso%20de%20meliponicultura." target="_blank" rel="noopener">Entrar na lista</a>
+      </article>
+      <article class="curso" style="--curso-cor:var(--ouro)">
+        <p class="rot" style="color:var(--tinta-2)">Presencial · 1 encontro</p>
+        <h3>Workshop de degustação</h3>
+        <p>A prova guiada dos cinco méis da casa, com ficha de degustação na mão: como olhar, cheirar, provar e descrever o que você sentiu.</p>
+        <ul>
+          <li>Prova comparativa das cinco espécies</li>
+          <li>Ficha de análise sensorial</li>
+          <li>Ideal para chefs, baristas e lojistas</li>
+        </ul>
+        <a class="bt bt--forte bt--p" style="align-self:flex-start; margin-top:.4rem" href="https://wa.me/5547988478238?text=Quero%20saber%20sobre%20o%20workshop%20de%20degusta%C3%A7%C3%A3o." target="_blank" rel="noopener">Entrar na lista</a>
+      </article>
+      <article class="curso" style="--curso-cor:var(--folha)">
+        <p class="rot" style="color:var(--tinta-2)">Presencial ou on-line</p>
+        <h3>Consultoria para meliponários</h3>
+        <p>Diagnóstico de colônias, plano de manejo, estrutura de colheita e orientação para quem quer produzir com escala e regularidade.</p>
+        <ul>
+          <li>Visita técnica ou análise remota</li>
+          <li>Plano de manejo por escrito</li>
+          <li>Acompanhamento por período combinado</li>
+        </ul>
+        <a class="bt bt--forte bt--p" style="align-self:flex-start; margin-top:.4rem" href="https://wa.me/5547988478238?text=Quero%20saber%20sobre%20consultoria%20para%20meliponi%C3%A1rio." target="_blank" rel="noopener">Pedir orçamento</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ KITS ============================ -->
+<section class="sec" id="kits">
+  <div class="env">
+    <div class="cab-sec rev">
+      <p class="rot" style="color:var(--terra)">Formas de comprar</p>
+      <h2>Kits, presente e clube.</h2>
+    </div>
+    <div class="kits rev" data-pend="composição e preços a definir">
+      <article class="kit">
+        <h3>Kit Descoberta</h3>
+        <p style="color:var(--tinta-2); font-size:.97rem">Três méis para entender a diferença entre as espécies.</p>
+        <div class="kit__v"><b class="num">R$ 289</b><s class="num">R$ 339</s></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Jataí, Mandaçaia e Guaraipo — 200 g cada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Guia de degustação impresso</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Caixa para presente</li>
+        </ul>
+        <button class="bt bt--forte" data-add="kit-descoberta">Adicionar ao carrinho</button>
+      </article>
+      <article class="kit kit--destaque">
+        <span class="kit__tag">Mais escolhido</span>
+        <h3>Kit Sommelier</h3>
+        <p style="color:var(--tinta-2); font-size:.97rem">Os cinco méis da casa, na ordem certa de prova.</p>
+        <div class="kit__v"><b class="num">R$ 545</b><s class="num">R$ 636</s></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Os cinco méis — 200 g cada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Caderno de notas de degustação</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Vídeo-aula de degustação guiada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Frete grátis para todo o Brasil</li>
+        </ul>
+        <button class="bt bt--forte" data-add="kit-sommelier">Adicionar ao carrinho</button>
+      </article>
+      <article class="kit">
+        <h3>Clube Melibees</h3>
+        <p style="color:var(--tinta-2); font-size:.97rem">Assinatura trimestral, acompanhando a safra do meliponário.</p>
+        <div class="kit__v"><b class="num">R$ 179</b><span style="color:var(--tinta-2); font-size:.9rem">/trimestre</span></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 2 méis + 1 extrato de própolis</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Carta da safra escrita pelo Ricardo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Prioridade nos lotes pequenos</li>
+        </ul>
+        <button class="bt bt--forte" data-add="clube">Assinar</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ENTREGA ============================ -->
+<section class="faixa f-esc" id="entrega">
+  <div class="pat" aria-hidden="true"></div>
+  <div class="env sec">
+    <div class="cab-sec rev">
+      <p class="rot">Entrega</p>
+      <h2>Vidro viaja bem quando é embalado direito.</h2>
+      <p>Enviamos para todo o Brasil. Cada pote vai protegido individualmente, em caixa com preenchimento, e o pedido só sai depois de conferido pote a pote.</p>
+    </div>
+    <div class="entregas rev" data-pend="transportadora, prazos e política de frete a confirmar">
+      <article class="entrega">
+        <div class="entrega__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M14 9h4l4 4v4a1 1 0 0 1-1 1h-1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></div>
+        <h3>Todo o Brasil</h3>
+        <p>Envio por transportadora parceira com rastreio. Prazo estimado no fechamento do pedido.</p>
+      </article>
+      <article class="entrega">
+        <div class="entrega__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8v13H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg></div>
+        <h3>Embalagem protegida</h3>
+        <p>Pote a pote em envelope-bolha, caixa reforçada e preenchimento. Quebrou no caminho, a gente repõe.</p>
+      </article>
+      <article class="entrega">
+        <div class="entrega__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Retirada em Joinville</h3>
+        <p>Combina pelo WhatsApp e retira sem custo de frete. Também entregamos na região.</p>
+      </article>
+      <article class="entrega">
+        <div class="entrega__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+        <h3>Pagamento</h3>
+        <p>Pix, cartão em até 3x sem juros ou boleto. O pedido é fechado com o Ricardo pelo WhatsApp.</p>
+      </article>
+    </div>
+  </div>
+  <svg class="onda" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" style="color:var(--papel)">
+    <path d="M0,36 C240,4 460,66 720,48 C960,32 1180,74 1440,40 L1440,80 L0,80 Z"/>
+  </svg>
+</section>
+
+<!-- ============================ RODAPÉ ============================ -->
+<footer class="rodape">
+  <div class="env">
+    <div class="rodape__grade">
+      <div>
+        <img class="rodape__logo" src="assets/logo-branco.png" alt="Melibees — produtos das abelhas">
+        <p style="font-size:.95rem; opacity:.85; max-width:34ch" class="ui">Mel e extrato de própolis de abelhas nativas sem ferrão, produzidos em Joinville, Santa Catarina.</p>
+        <svg viewBox="0 0 420 420" role="img" aria-label="Selo ANSF" style="display:block; width:76px; margin-top:1.2rem; opacity:.9">
+          <mask id="selo-sem-sigla-r"><rect width="420" height="420" fill="#fff"/><rect x="145" y="44" width="130" height="52" fill="#000"/></mask>
+          <image href="assets/selo-asf-branco.png" width="420" height="420" mask="url(#selo-sem-sigla-r)"/><text class="selo__sigla" x="210" y="89" fill="#fff">ANSF</text>
+        </svg>
+      </div>
+      <div>
+        <h4>Produtos</h4>
+        <ul>
+          <li><a href="#degustacao">Mesa de degustação</a></li>
+          <li><a href="#meles">Os cinco méis</a></li>
+          <li><a href="#propolis">Extrato de própolis</a></li>
+          <li><a href="#kits">Kits e clube</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>A Melibees</h4>
+        <ul>
+          <li><a href="#ricardo">O produtor</a></li>
+          <li><a href="#producao">Como produzimos</a></li>
+          <li><a href="#cursos">Cursos e consultoria</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5547988478238" target="_blank" rel="noopener">WhatsApp (47) 98847-8238</a></li>
+          <li><a href="#" data-pend="perfil do Instagram">Instagram</a></li>
+          <li><a href="#" data-pend="e-mail comercial">E-mail comercial</a></li>
+          <li><a href="#entrega">Entrega e frete</a></li>
+        </ul>
+        <p class="ui" style="font-size:.86rem; opacity:.78; margin-top:1rem; line-height:1.5">
+          Rua Alexandre Schlemm, 554 — Apto 1001<br>Anita Garibaldi · Joinville/SC · 89202-181
+        </p>
+      </div>
+    </div>
+    <div class="rodape__legal">
+      <span>MELIBEES · CNPJ 57.957.130/0001-34 · Todos os direitos reservados</span>
+      <span>Mel e própolis são alimentos. Esta página não faz indicação terapêutica.</span>
+      <button class="bt-pend" id="bt-pend" aria-pressed="false">Marcar conteúdo pendente</button>
+    </div>
+  </div>
+</footer>
+
+<a class="zap" href="https://wa.me/5547988478238?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Melibees." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 5.83 2.42 8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.69 8.23-8.24 8.23Zm4.52-6.16c-.25-.13-1.47-.72-1.69-.8-.23-.09-.39-.13-.56.12-.16.25-.64.8-.78.97-.14.16-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+</a>
+
+<!-- carrinho -->
+<div class="veu" id="veu"></div>
+<aside class="gaveta" id="gaveta" role="dialog" aria-modal="true" aria-labelledby="gaveta-t" aria-hidden="true">
+  <div class="gaveta__cab">
+    <h3 id="gaveta-t">Seu pedido</h3>
+    <button class="x" id="fechar-carrinho" aria-label="Fechar carrinho"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="gaveta__itens" id="gaveta-itens"></div>
+  <div class="gaveta__pe">
+    <div class="gaveta__tot"><span class="ui" style="font-weight:700">Total</span><b class="num" id="gaveta-total">R$ 0</b></div>
+    <a class="bt bt--forte" id="fechar-pedido" href="https://wa.me/5547988478238" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"/></svg>
+      Fechar pedido no WhatsApp
+    </a>
+    <p class="gaveta__obs">Protótipo: o pedido é montado aqui e enviado como mensagem para o Ricardo. Frete e pagamento são combinados na conversa.</p>
+  </div>
+</aside>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- catálogo ----------
+     Notas de degustação: conteúdo de apoio, a validar com o Ricardo.
+     Preços: provisórios. */
+  var MELES = [
+    {
+      id:"jatai", img:"assets/mel-jatai.svg", nome:"Jataí", especie:"Tetragonisca angustula",
+      mel:"#EFC85E", melEsc:"#C99A2C", peso:"200 g · vidro", preco:129,
+      resumo:"O mais conhecido entre os méis de abelha sem ferrão — e o mais ácido de todos. Fluido, quase translúcido, com um final cítrico que muita gente confunde com limão.",
+      perfil:{ "Doçura":55, "Acidez":78, "Corpo":35, "Floral":72, "Retrogosto":60 },
+      aroma:["cítrico","flor de laranjeira","erva fresca","mel claro"],
+      textura:"Fluido e leve. Escorre rápido da colher e não deixa película na boca.",
+      harmoniza:"Queijos frescos, água com gás, sobremesas cítricas e drinques no lugar do limão.",
+      quando:"Para quem quer entender por que este mel é diferente. É o mel de abrir a conversa."
+    },
+    {
+      id:"mandacaia", img:"assets/mel-mandacaia.svg", nome:"Mandaçaia", especie:"Melipona quadrifasciata",
+      mel:"#E0A63A", melEsc:"#B87A21", peso:"200 g · vidro", preco:98,
+      resumo:"O ponto de entrada. Encorpado, com doçura redonda e acidez discreta — o mel que faz a ponte para quem só conhece mel de Apis.",
+      perfil:{ "Doçura":70, "Acidez":55, "Corpo":62, "Floral":58, "Retrogosto":66 },
+      aroma:["melado","caramelo claro","flores do campo","cera"],
+      textura:"Aveludado, com viscosidade média. Cobre a colher sem pesar.",
+      harmoniza:"Pães de fermentação natural, queijos curados, café coado e iogurte natural.",
+      quando:"O primeiro pote de quem está começando. Também o mais fácil de presentear."
+    },
+    {
+      id:"guaraipo", img:"assets/mel-guaraipo.svg", nome:"Guaraipo", especie:"Melipona bicolor schenki",
+      mel:"#E8B84A", melEsc:"#C08F26", peso:"200 g · vidro", preco:145,
+      resumo:"O mais doce da casa e o mais escasso. Colônia pequena, colheita pequena — sai em lote reduzido e acaba primeiro.",
+      perfil:{ "Doçura":82, "Acidez":38, "Corpo":55, "Floral":80, "Retrogosto":72 },
+      aroma:["flor branca","baunilha","fruta madura","mel floral"],
+      textura:"Sedoso. Doçura longa que permanece bastante tempo depois da colher.",
+      harmoniza:"Puro, na colher. Sobremesas delicadas, panna cotta, queijo de cabra fresco.",
+      quando:"Para presentear alguém que já conhece mel — ou para guardar para uma ocasião."
+    },
+    {
+      id:"bugia", img:"assets/mel-bugia.svg", nome:"Bugia", especie:"Melipona mondury",
+      mel:"#C58330", melEsc:"#8F5615", peso:"200 g · vidro", preco:112,
+      resumo:"Escuro, denso e sério. O mel mais estruturado da linha, com retrogosto longo de melaço e madeira.",
+      perfil:{ "Doçura":60, "Acidez":62, "Corpo":85, "Floral":45, "Retrogosto":84 },
+      aroma:["melaço","madeira","fruta escura","resina"],
+      textura:"Denso, quase resinoso. Escorre devagar e permanece na boca.",
+      harmoniza:"Carnes assadas, queijo azul, cachaça envelhecida e chocolate amargo.",
+      quando:"Para cozinha. É o mel que não desaparece dentro do prato."
+    },
+    {
+      id:"canudo", img:"assets/mel-canudo.svg", nome:"Canudo", especie:"Scaptotrigona depilis",
+      mel:"#CE8F31", melEsc:"#9A611A", peso:"200 g · vidro", preco:92,
+      resumo:"O mais selvagem. Acidez alta e marcante, com uma nota fermentada nobre que lembra cidra. Divide opiniões — e cria devoto.",
+      perfil:{ "Doçura":48, "Acidez":88, "Corpo":70, "Floral":40, "Retrogosto":78 },
+      aroma:["fermentado nobre","cidra","própolis","fruta em conserva"],
+      textura:"Ácido franco e final seco. Limpa a boca em vez de adoçar.",
+      harmoniza:"Coquetelaria, molhos agridoces, embutidos e queijos de mofo.",
+      quando:"Para quem já provou os outros quatro e quer o extremo da linha."
+    }
+  ];
+
+  var PROPOLIS = [
+    { id:"prop-jatai", img:"assets/propolis-jatai.jpg", nome:"Jataí", tipo:"Extrato de própolis", vol:"30 ml", cor:"#9A6A22", preco:68,
+      nota:"Resina clara, aroma cítrico e final leve. O mais suave da linha." },
+    { id:"prop-mandacaia", img:"assets/propolis-mandacaia.jpg", nome:"Mandaçaia", tipo:"Extrato de própolis", vol:"30 ml", cor:"#7C4E1B", preco:72,
+      nota:"Corpo médio, amargor equilibrado e retrogosto resinoso." },
+    { id:"prop-tubuna", img:"assets/propolis-tubuna.jpg", nome:"Tubuna", tipo:"Extrato de própolis", vol:"30 ml", cor:"#5C3411", preco:78,
+      nota:"O mais escuro e intenso. Amargor firme, aroma de mata fechada." },
+    { id:"prop-mandacaia-azul", img:"assets/propolis-mandacaia-azul.jpg", nome:"Mandaçaia Azul", tipo:"Extrato de própolis", vol:"20 ml", cor:"#4A3A5C", preco:64,
+      nota:"Lote especial, coloração característica e aroma marcante." },
+    { id:"prop-jatai-ess", img:"assets/propolis-jatai-essencial.jpg", nome:"Jataí Essencial", tipo:"Extrato concentrado", vol:"30 ml", cor:"#8A5A1E", preco:89,
+      nota:"Linha Essencial: concentração mais alta, para uso mais econômico." },
+    { id:"prop-tubuna-ess", img:"assets/propolis-tubuna-essencial.jpg", nome:"Tubuna Essencial", tipo:"Extrato concentrado", vol:"30 ml", cor:"#4A2A0D", preco:95,
+      nota:"Linha Essencial: o extrato mais concentrado da casa." }
+  ];
+
+  var KITS = {
+    "kit-descoberta":{ nome:"Kit Descoberta", sub:"3 méis + guia", preco:289 },
+    "kit-sommelier":{ nome:"Kit Sommelier", sub:"5 méis + caderno", preco:545 },
+    "clube":{ nome:"Clube Melibees", sub:"assinatura trimestral", preco:179 }
+  };
+
+  var LOGO_POTE = "assets/logo-branco.png";
+
+  function moeda(n){ return "R$ " + n.toLocaleString("pt-BR"); }
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+
+  /* ---------- desenho do pote ---------- */
+  function potePote(m, largura){
+    /* sem largura, o tamanho vem do CSS (caso do trio do herói) */
+    var pw = largura ? "--pw:" + largura + "px; " : "";
+    if(m.img) return '<div class="pote pote--foto" style="'+pw+'"><img src="'+m.img+'" alt="Pote de mel '+esc(m.nome)+', 200 g"></div>';
+    /* sem foto: desenho do rótulo em CSS */
+    return '<div class="pote" style="'+pw+'--mel-cor:'+m.mel+'; --mel-cor-esc:'+m.melEsc+'">' +
+      '<div class="pote__tampa"></div>' +
+      '<div class="pote__vidro">' +
+        '<div class="pote__brilho"></div>' +
+        '<div class="pote__rot">' +
+          '<div class="pote__arco pote__arco--t"><img class="pote__logo" src="'+LOGO_POTE+'" alt=""></div>' +
+          '<div class="pote__nome"><small>mel</small><b>'+esc(m.nome)+'</b></div>' +
+          '<div class="pote__arco pote__arco--b"><div class="pote__base"><small>de abelha sem ferrão</small><b>200g</b></div></div>' +
+        '</div>' +
+      '</div></div>';
+  }
+  function poteFrasco(p, largura){
+    if(p.img) return '<div class="frasco frasco--foto"><img src="'+p.img+'" alt="Frasco de extrato de própolis '+esc(p.nome)+', '+esc(p.vol)+'"></div>';
+    return '<div class="frasco" style="--pw:'+largura+'px; --mel-cor:'+p.cor+'">' +
+      '<div class="frasco__conta"></div><div class="frasco__gargalo"></div>' +
+      '<div class="frasco__corpo"><div class="frasco__rot">' +
+        '<span class="t">extrato de própolis</span>' +
+        '<span class="n">'+esc(p.nome)+'</span>' +
+        '<span class="v">'+esc(p.vol)+'</span>' +
+      '</div></div></div>';
+  }
+
+  /* ---------- mesa de degustação ---------- */
+  var abas = document.querySelector(".mesa__abas");
+  var ficha = document.getElementById("ficha");
+  var palco = document.getElementById("palco");
+  var palcoPote = document.getElementById("palco-pote");
+  var palcoPreco = document.getElementById("palco-preco");
+  var palcoPeso = document.getElementById("palco-peso");
+  var atual = 0;
+
+  MELES.forEach(function(m, i){
+    var b = document.createElement("button");
+    b.className = "aba";
+    b.type = "button";
+    b.setAttribute("role","tab");
+    b.setAttribute("aria-selected", i === 0 ? "true" : "false");
+    b.innerHTML = '<span class="aba__gota" style="background:'+m.mel+'"></span>' + esc(m.nome);
+    b.addEventListener("click", function(){ selecionar(i); });
+    abas.appendChild(b);
+  });
+
+  function selecionar(i){
+    atual = i;
+    var m = MELES[i];
+    Array.prototype.forEach.call(abas.children, function(b, k){
+      b.setAttribute("aria-selected", k === i ? "true" : "false");
+    });
+
+    palco.classList.add("trocando");
+    window.setTimeout(function(){
+      palcoPote.innerHTML = potePote(m, null);
+      palcoPreco.textContent = moeda(m.preco);
+      palcoPeso.textContent = m.peso;
+      palco.classList.remove("trocando");
+    }, 180);
+
+    var barras = "";
+    Object.keys(m.perfil).forEach(function(k){
+      barras += '<div class="linha-perfil"><span class="rot">'+esc(k)+'</span>' +
+                '<span class="barra"><i data-w="'+m.perfil[k]+'"></i></span></div>';
+    });
+    var chips = m.aroma.map(function(a){ return '<span class="chip">'+esc(a)+'</span>'; }).join("");
+
+    ficha.innerHTML =
+      '<div class="ficha__topo"><h3>Mel de '+esc(m.nome)+'</h3><span class="ficha__esp sp">'+esc(m.especie)+'</span></div>' +
+      '<p class="ficha__res">'+esc(m.resumo)+'</p>' +
+      '<div class="perfil" data-pend="notas a validar com o Ricardo"><p class="rot" style="color:var(--tinta-2); margin-bottom:.3rem">Perfil sensorial</p>'+barras+'<p class="perfil__legenda">Intensidade relativa entre os méis da casa.</p></div>' +
+      '<div><p class="rot" style="color:var(--tinta-2); margin-bottom:.5rem">Aroma</p><div class="chips">'+chips+'</div></div>' +
+      '<div class="pares">' +
+        '<div class="par"><p class="rot">Textura</p><p>'+esc(m.textura)+'</p></div>' +
+        '<div class="par"><p class="rot">Harmoniza com</p><p>'+esc(m.harmoniza)+'</p></div>' +
+        '<div class="par"><p class="rot">Para quem é</p><p>'+esc(m.quando)+'</p></div>' +
+      '</div>' +
+      '<div class="ficha__acoes">' +
+        '<button class="bt bt--forte" data-add="'+m.id+'">Adicionar ao pedido · '+moeda(m.preco)+'</button>' +
+        '<a class="bt" style="border:2px solid var(--linha)" href="#meles">Ver a linha completa</a>' +
+      '</div>';
+
+    window.requestAnimationFrame(function(){
+      window.requestAnimationFrame(function(){
+        Array.prototype.forEach.call(ficha.querySelectorAll(".barra i"), function(el){
+          el.style.width = el.getAttribute("data-w") + "%";
+        });
+      });
+    });
+  }
+
+  abas.addEventListener("keydown", function(e){
+    if(e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    e.preventDefault();
+    var prox = e.key === "ArrowRight" ? (atual + 1) % MELES.length : (atual - 1 + MELES.length) % MELES.length;
+    selecionar(prox);
+    abas.children[prox].focus();
+  });
+
+  selecionar(0);
+
+  /* ---------- trio do herói ---------- */
+  var trio = document.getElementById("heroi-potes");
+  ["jatai","mandacaia","bugia"].forEach(function(id){
+    var m = MELES.filter(function(x){ return x.id === id; })[0];
+    trio.insertAdjacentHTML("beforeend", potePote(m, null));
+  });
+
+  /* ---------- grades de produto ---------- */
+  var gm = document.getElementById("grade-meles");
+  gm.innerHTML = MELES.map(function(m){
+    return '<article class="prod">' + potePote(m, 132) +
+      '<div class="prod__cab"><h3>'+esc(m.nome)+'</h3><span class="sp">'+esc(m.especie)+'</span></div>' +
+      '<p class="prod__nota">'+esc(m.resumo.split(".")[0])+'.</p>' +
+      '<div class="prod__pe"><span class="prod__preco num">'+moeda(m.preco)+'<small>200 g</small></span>' +
+      '<button class="bt bt--forte bt--p" data-add="'+m.id+'">Adicionar</button></div>' +
+      '</article>';
+  }).join("");
+
+  var gp = document.getElementById("grade-propolis");
+  gp.innerHTML = PROPOLIS.map(function(p){
+    return '<article class="prod" style="background:#fff; color:#2C1B0F; border-color:rgba(0,0,0,.08)">' + poteFrasco(p, 98) +
+      '<div class="prod__cab"><h3>'+esc(p.nome)+'</h3><span class="sp" style="color:#7B6553">'+esc(p.tipo)+' · '+esc(p.vol)+'</span></div>' +
+      '<p class="prod__nota" style="color:#7B6553">'+esc(p.nota)+'</p>' +
+      '<div class="prod__pe"><span class="prod__preco num">'+moeda(p.preco)+'<small style="color:#7B6553">'+esc(p.vol)+'</small></span>' +
+      '<button class="bt bt--forte bt--p" data-add="'+p.id+'">Adicionar</button></div>' +
+      '</article>';
+  }).join("");
+
+  /* ---------- carrinho ---------- */
+  var cesta = {};
+  var itens = document.getElementById("gaveta-itens");
+  var totalEl = document.getElementById("gaveta-total");
+  var contador = document.getElementById("carrinho-n");
+  var zapPedido = document.getElementById("fechar-pedido");
+
+  function achar(id){
+    var m = MELES.filter(function(x){ return x.id === id; })[0];
+    if(m) return { nome:"Mel de " + m.nome, sub:m.peso, preco:m.preco };
+    var p = PROPOLIS.filter(function(x){ return x.id === id; })[0];
+    if(p) return { nome:p.tipo + " " + p.nome, sub:p.vol, preco:p.preco };
+    if(KITS[id]) return KITS[id];
+    return null;
+  }
+
+  function alterar(id, delta){
+    var prod = achar(id);
+    if(!prod) return;
+    if(!cesta[id]) cesta[id] = { prod:prod, q:0 };
+    cesta[id].q += delta;
+    if(cesta[id].q <= 0) delete cesta[id];
+    desenhar();
+  }
+
+  function desenhar(){
+    var ids = Object.keys(cesta);
+    var total = 0, n = 0;
+    ids.forEach(function(id){ total += cesta[id].prod.preco * cesta[id].q; n += cesta[id].q; });
+
+    contador.textContent = n;
+    totalEl.textContent = moeda(total);
+
+    if(!ids.length){
+      itens.innerHTML = '<div class="gaveta__vazio"><img src="assets/bee-terracota.png" alt=""><p>Seu pedido está vazio.<br>Comece pela mesa de degustação.</p></div>';
+    } else {
+      itens.innerHTML = ids.map(function(id){
+        var c = cesta[id];
+        return '<div class="item">' +
+          '<span class="item__n">'+esc(c.prod.nome)+'<span>'+esc(c.prod.sub)+'</span></span>' +
+          '<span class="item__v num">'+moeda(c.prod.preco * c.q)+'</span>' +
+          '<span class="qt"><button type="button" data-menos="'+id+'" aria-label="Remover um">−</button>' +
+          '<span class="num">'+c.q+'</span>' +
+          '<button type="button" data-mais="'+id+'" aria-label="Adicionar um">+</button></span>' +
+          '</div>';
+      }).join("");
+    }
+
+    var linhas = ids.map(function(id){
+      return "• " + cesta[id].q + "x " + cesta[id].prod.nome + " (" + cesta[id].prod.sub + ")";
+    });
+    var msg = "Olá! Vim pelo site da Melibees e quero fechar este pedido:\n\n" +
+              (linhas.length ? linhas.join("\n") : "(pedido vazio)") +
+              "\n\nTotal dos produtos: " + moeda(total) +
+              "\n\nPode me passar o frete?";
+    zapPedido.href = "https://wa.me/5547988478238?text=" + encodeURIComponent(msg);
+  }
+
+  document.addEventListener("click", function(e){
+    var add = e.target.closest("[data-add]");
+    if(add){ alterar(add.getAttribute("data-add"), 1); abrir(); return; }
+    var mais = e.target.closest("[data-mais]");
+    if(mais){ alterar(mais.getAttribute("data-mais"), 1); return; }
+    var menos = e.target.closest("[data-menos]");
+    if(menos){ alterar(menos.getAttribute("data-menos"), -1); return; }
+  });
+
+  var gaveta = document.getElementById("gaveta");
+  function abrir(){
+    document.body.classList.add("carrinho-aberto");
+    gaveta.setAttribute("aria-hidden","false");
+    document.getElementById("fechar-carrinho").focus();
+  }
+  function fechar(){
+    document.body.classList.remove("carrinho-aberto");
+    gaveta.setAttribute("aria-hidden","true");
+  }
+  document.getElementById("abrir-carrinho").addEventListener("click", abrir);
+  document.getElementById("fechar-carrinho").addEventListener("click", fechar);
+  document.getElementById("veu").addEventListener("click", fechar);
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") fechar(); });
+
+  desenhar();
+
+  /* ---------- topo fixo ---------- */
+  var topo = document.getElementById("topo");
+  window.addEventListener("scroll", function(){
+    topo.classList.toggle("fix", window.scrollY > 12);
+  }, { passive:true });
+
+  /* ---------- revelação ---------- */
+  if("IntersectionObserver" in window){
+    var obs = new IntersectionObserver(function(entradas){
+      entradas.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add("vis"); obs.unobserve(en.target); }
+      });
+    }, { rootMargin:"0px 0px -8% 0px", threshold:0.06 });
+    Array.prototype.forEach.call(document.querySelectorAll(".rev"), function(el){ obs.observe(el); });
+  } else {
+    Array.prototype.forEach.call(document.querySelectorAll(".rev"), function(el){ el.classList.add("vis"); });
+  }
+
+  /* ---------- marcar conteúdo pendente ---------- */
+  var btPend = document.getElementById("bt-pend");
+  btPend.addEventListener("click", function(){
+    var ativo = document.body.classList.toggle("ver-pendentes");
+    btPend.setAttribute("aria-pressed", ativo ? "true" : "false");
+    btPend.textContent = ativo ? "Ocultar conteúdo pendente" : "Marcar conteúdo pendente";
+  });
+})();
+</script>
+<!--ARTIFACT:END-->
+</body>
+</html>
